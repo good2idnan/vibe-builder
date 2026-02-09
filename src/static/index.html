@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeBuilder - AI Code Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+    <!-- Welcome View -->
+    <div id="welcome-view" class="view active">
+        <div class="welcome-content">
+            <div class="brand-logo">✨ VibeBuilder</div>
+            <div class="logo-large">Hello, Builder.</div>
+            <p class="subtitle">Describe your dream app and watch it come to life.</p>
+            
+            <div class="input-box">
+                <textarea 
+                    id="idea-input" 
+                    placeholder="Describe your app... (e.g. A modern todo app with dark mode)"
+                ></textarea>
+                <div class="action-row">
+                    <span style="font-size: 0.8rem; color: #9ca3af;">Press Ctrl + Enter to build</span>
+                    <button id="build-btn" class="build-btn">
+                        <span>Build App</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="suggestions">
+                <div class="chip" data-idea="Todo app with dark mode">Todo App</div>
+                <div class="chip" data-idea="Scientific Calculator">Calculator</div>
+                <div class="chip" data-idea="Pomodoro Timer">Timer</div>
+                <div class="chip" data-idea="Weather Dashboard">Weather</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Building View -->
+    <div id="building-view" class="view">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-nav">
+                <button id="back-btn" class="back-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="project-name" id="project-title">New Project</div>
+            </div>
+            
+            <div class="chat-area" id="chat-container">
+                <!-- Messages injected here -->
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="refine-input-wrapper">
+                    <input type="text" id="refine-input" placeholder="Ask to make changes..." />
+                    <button id="refine-btn" class="send-btn-small">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Preview Canvas -->
+        <main class="preview-main">
+            <div class="preview-header">
+                <div class="view-tabs">
+                    <button class="view-tab active" data-tab="preview">Preview</button>
+                    <button class="view-tab" data-tab="code">Code</button>
+                </div>
+                
+                <button id="download-btn" class="icon-btn" style="display: none;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                    </svg>
+                    Download
+                </button>
+            </div>
+            
+            <div class="preview-container">
+                <div class="status-pill" id="status-pill" style="display: none;">
+                    <div class="spinner-sm"></div>
+                    <span id="status-text">Getting ready...</span>
+                </div>
+                
+                <iframe id="preview-frame" class="preview-content"></iframe>
+                <div id="code-panel" class="preview-content">
+                    <pre><code id="code-display"></code></pre>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
