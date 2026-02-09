@@ -1,4 +1,4 @@
-# ✨ VibeBuilder V2
+# ✨ VibeBuilder
 
 **Build your dream web app in seconds with AI.**
 
