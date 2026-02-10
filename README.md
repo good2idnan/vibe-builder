@@ -4,8 +4,7 @@
 
 VibeBuilder is an open-source, agentic AI web builder that orchestrates a team of specialized AI agents to research, plan, code, test, and debug modern web applications from a single text prompt. Powered by **Google Gemini 2.5 Flash**.
 
-![VibeBuilder Demo](https://via.placeholder.com/800x400?text=VibeBuilder+V2+Demo+Placeholder)
-_(Note: Replace this placeholder with a real screenshot of your running application)_
+<img width="531" height="164" alt="vibebuilder_logo" src="https://github.com/user-attachments/assets/c7c1234e-fed4-4ae6-9194-dab02f5af712" />
 
 ## 🚀 Features
 
