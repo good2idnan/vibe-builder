@@ -38,8 +38,8 @@ graph TD
 1.  **Clone the repository**
 
     ```bash
-    git clone https://github.com/yourusername/vibe-builder-v2.git
-    cd vibe-builder-v2
+    git clone https://github.com/yourusername/vibe-builder.git
+    cd vibe-builder
     ```
 
 2.  **Create a virtual environment**
